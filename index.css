@@ -18,6 +18,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 @font-face {
     font-family: 'SST Medium';
     src: url('./font/SST-Italic.woff2') format('woff2');
@@ -25,10 +26,11 @@
     font-style: normal;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     display: none;
 }
 
@@ -101,7 +103,7 @@
     border-radius: 14px;
     border: none;
     outline: none;
-    padding: 6px 14px;
+    padding: 10px 14px;
     font-size: 16px;
     font-family: 'SST';
     cursor: pointer;
@@ -111,8 +113,9 @@
 
 .btn_blue:hover {
     background-color: #034f8d;
-    box-shadow: 0 0 0 4px #ffffff,  /* White gap shadow */
-    0 0 0 6px #004d99;  
+    box-shadow: 0 0 0 4px #ffffff,
+        /* White gap shadow */
+        0 0 0 6px #004d99;
 }
 
 .icon:hover p {
@@ -268,7 +271,7 @@
         position: absolute;
         top: 90%;
         height: 300px;
-        background-image: linear-gradient(to right , rgba(0,0,0,1) ,rgba(0,0,0,0.95));
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.95));
         background-blend-mode: color-burn;
         box-shadow: 0 -50px 50px 30px black;
     }
@@ -364,12 +367,13 @@
 
 
 /* fourth section cards */
-.card_section{
+.card_section {
     margin-top: 50px;
     width: 100%;
     height: 100%;
 
 }
+
 .card_section-cards {
     width: 90%;
     margin: 0 auto;
@@ -379,41 +383,46 @@
     grid-auto-flow: row;
     grid-auto-rows: 86px;
 }
-.card_section-cards > div > picture > img {
+
+.card_section-cards>div>picture>img {
     width: 100%;
     height: 100%;
     border-radius: 12px;
     object-fit: cover;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-    filter: contrast(60%); /* reduce the color saturation initially */
+    filter: contrast(60%);
+    /* reduce the color saturation initially */
 
 }
-.card_section-cards > div > picture > img:hover{
+
+.card_section-cards>div>picture>img:hover {
     transform: translateY(-10px);
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
-    filter: contrast(100%); /* restore full color on hover */
-    
+    filter: contrast(100%);
+    /* restore full color on hover */
+
 }
 
 @media screen and (max-width : 1024px) {
-    .card_section-cards{
+    .card_section-cards {
         width: 95%;
         margin: 0 auto;
         margin-top: 300px;
     }
-} 
+}
 
 
 /* fifth section */
 
-.banner_section{
+.banner_section {
     width: 100%;
     display: flex;
     flex-direction: row;
 
 }
-.banner_section-left{
+
+.banner_section-left {
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -422,52 +431,224 @@
     justify-content: center;
     padding: 50px;
 }
-.banner_section-left-heading{
+
+.banner_section-left-heading {
     font-family: 'SST Light';
     font-size: 32px;
-    
+
 }
-.banner_section-left-paragraph{
+
+.banner_section-left-paragraph {
     font-family: 'SST Light';
     font-size: 22px;
     line-height: 35px;
 }
-.banner_section-right{
+
+.banner_section-right {
     width: 60%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.banner_section-right > picture > img {
+
+.banner_section-right>picture>img {
     width: 80%;
     height: 80%;
 }
 
 @media screen and (max-width : 768px) {
-    .banner_section{
+    .banner_section {
         flex-direction: column-reverse;
-    
+
     }
-    .banner_section-left{
+
+    .banner_section-left {
         width: 100%;
         align-items: center;
         justify-content: center;
         text-align: center;
     }
 
-    .banner_section-right{
+    .banner_section-right {
         width: 60%;
         margin: 0 auto;
     }
-    .banner_section-right > picture > img{
+
+    .banner_section-right>picture>img {
         width: 100%;
         height: 100%;
     }
 }
 
-@media screen and (max-width : 472px){
-    .banner_section-left-paragraph{
+@media screen and (max-width : 472px) {
+    .banner_section-left-paragraph {
         font-size: 16px;
         line-height: normal;
     }
-} 
+}
+
+
+/* play station plus */
+
+.playstation-plus {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.playstation-plus-overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image:url("https://gmedia.playstation.com/is/image/SIEPDC/ps-plus-monthly-games-banner-desktop-01-en-27may22?$100px$");
+    background-repeat: no-repeat;
+    background-position: center;  
+    background-size: cover;  
+}
+
+@media screen and (min-width: 320px) {
+    .playstation-plus-overlay {
+        background-image:url("https://gmedia.playstation.com/is/image/SIEPDC/ps-plus-monthly-games-banner-mobile-02-en-27may22?$800px$");
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .playstation-plus-overlay {
+        background-image:url("https://gmedia.playstation.com/is/image/SIEPDC/ps-plus-monthly-games-banner-desktop-01-en-27may22?$1200px$");
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .playstation-plus-overlay {
+        background-image:url("https://gmedia.playstation.com/is/image/SIEPDC/ps-plus-monthly-games-banner-desktop-01-en-27may22?$1600px$");
+    }
+}
+
+@media screen and (min-width: 1367px) {
+    .playstation-plus-overlay {
+        background-image:url("https://gmedia.playstation.com/is/image/SIEPDC/ps-plus-monthly-games-banner-desktop-01-en-27may22?$2400px$");
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .playstation-plus-overlay {
+        background-image:url("https://gmedia.playstation.com/is/image/SIEPDC/ps-plus-monthly-games-banner-desktop-01-en-27may22?$3200px$");
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    .playstation-plus-overlay {
+        background-image:url("https://gmedia.playstation.com/is/image/SIEPDC/ps-plus-monthly-games-banner-desktop-01-en-27may22?$4000px$");
+    }
+}
+
+.playstation-plus-overlay-left {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    gap: 30px;
+
+}
+
+.playstation-plus-overlay-left_heading > img {
+    width: 65%;
+    height: 65%;
+}
+
+.playstation-plus-overlay-left>p {
+    font-family: "SST";
+    line-height: 26px;
+
+}
+
+.playstation-plus-overlay-left > button {
+    align-self: flex-start;
+}
+
+.playstation-plus-overlay-right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.playstation-plus-overlay-right > picture > img {
+    width: 90%;
+    height: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width : 1024px) {
+    .playstation-plus-overlay-right>picture>img {
+        width: 70%;
+        height: 70%;
+        margin: 0 auto;
+    }
+
+    .playstation-plus-overlay-left_heading>img {
+        width: 85%;
+        height: 85%;
+    }
+
+    .playstation-plus-overlay-left {
+        gap: 15px;
+        padding: 50px;
+
+    }
+
+}
+
+@media screen and (max-width : 768px) {
+    .playstation-plus-overlay-left {
+        padding: 30px;
+
+    }
+    .playstation-plus-overlay-left_heading>img {
+        width: 100%;
+        height: 100%;
+    }
+    .playstation-plus-overlay-left p{
+        display: none;
+    }
+    .playstation-plus-overlay-right > picture > img {
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+    }
+    .playstation-plus-overlay-left button{
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width : 420px) {
+    .playstation-plus-overlay-right{
+        width: 70%;
+        padding: 10px;
+    }
+    .playstation-plus-overlay-right > picture > img{
+        width: 100%;
+        height: 100%;
+    }
+    .playstation-plus-overlay-left{
+        width: 100%;
+        padding: 10px;
+    }
+    .playstation-plus-overlay-left p{
+        display: block;
+        text-align: center;
+        font-family: "SST Light";
+    }
+    .playstation-plus-overlay-left button{
+        align-self: center;
+    }
+    .playstation-plus-overlay{
+        flex-direction: column-reverse;
+        
+    }
+}
