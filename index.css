@@ -1,0 +1,354 @@
+@font-face {
+    font-family: 'SST';
+    src: url('./font/SST-Medium.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SST Light';
+    src: url('./font/SST-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SST Light2';
+    src: url('./font/SST-UltraLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+::-webkit-scrollbar-thumb{
+    display: none;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.first_section {
+    background-color: black;
+    width: 100%;
+    height: 34px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.first_section img {
+    width: 70px;
+}
+
+.navbar {
+    width: 100vw;
+    height: 65px;
+}
+
+.nav_section_desktop {
+    padding: 0.5rem 1.25rem;
+}
+
+.nav_links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-family: 'SST';
+}
+
+.nav_links_left {
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    align-items: center;
+}
+
+.nav_links_right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 2.5px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon_svg {
+    align-self: flex-end;
+}
+
+.btn_blue {
+    background-color: #0070cb;
+    color: white;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+    padding: 4px 14px;
+    font-size: 16px;
+    font-family: 'SST';
+    cursor: pointer;
+
+}
+
+.btn_blue:hover {
+    background-color: #034f8d;
+}
+
+.icon:hover p {
+    color: blue;
+    /* Change color to blue when user hovers */
+
+}
+
+.icon:hover .icon_svg {
+    fill: blue;
+    /* Change SVG color to blue when user hovers */
+}
+
+.nav_section_mobile {
+    display: none;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_section_mobile-section-1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* media queries for navbar */
+@media screen and (max-width : 700px) {
+    .nav_section_desktop {
+        display: none;
+    }
+
+    .nav_section_mobile {
+        display: flex;
+    }
+}
+
+
+
+/* third section */
+
+.hero_section {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.spidermanImage {
+    width: 100%;
+    height: 100%;
+}
+
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    left: 0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+    /* background-color: black; */
+}
+
+.content-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    z-index: 1;
+    gap: 20px;
+    top: 60px;
+    left: 10px;
+    padding-left: 35px;
+}
+
+.content-overlay-heading {
+    color: white;
+    font-family: 'SST Light2';
+    font-size: 35px;
+
+}
+
+.marvelImage {
+    width: 35%;
+    height: auto;
+    object-fit: contain;
+}
+
+.content-overlay-para {
+    color: white;
+    width: 39%;
+    font-family: 'SST Light';
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.content-overlay-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.white-btn {
+    background-color: white;
+    color: black;
+    font-family: 'SST';
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 10px 16px;
+    border: none;
+    outline: none;
+}
+
+.orange-btn {
+    background-color: #d63d02;
+    color: white;
+    font-family: 'SST';
+    border-radius: 30px;
+    font-size: 16px;
+    padding: 10px 16px;
+    border: none;
+    outline: none;
+}
+
+
+@media (max-width: 1200px) {
+    .content-overlay {
+        padding-left: 35px;
+        padding-right: 35px;
+        top: 120px;
+    }
+
+    .hero_section {
+        height: 645px;
+    }
+
+    .spidermanImage {
+        width: 100%;
+    }
+
+    .marvelImage {
+        width: 40%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+
+    .dark-overlay2 {
+        width: 100%;
+        position: absolute;
+        top: 90%;
+        height: 300px;
+        background-image: linear-gradient(to right , rgba(0,0,0,1) ,rgba(0,0,0,0.95));
+        background-blend-mode: color-burn;
+        box-shadow: 0 -50px 50px 30px black;
+    }
+
+    .marvelImageContainer {
+        text-align: center;
+    }
+
+    .content-overlay-para {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .dark-overlay {
+        width: 30%;
+    }
+
+    .marvelImage {
+        width: 80%;
+    }
+
+    .spidermanImage {
+        width: 100%;
+    }
+
+    .content-overlay {
+        bottom: -410px;
+        align-items: center;
+    }
+
+    .content-overlay-para {
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .dark-overlay2 {
+        width: 100%;
+        position: absolute;
+        top: 90%;
+        height: 300px;
+        background-color: rgba(15, 16, 31, 1);
+        ;
+    }
+
+    .hero_section {
+        height: 100%;
+    }
+
+    .content-overlay {
+        bottom: -250px;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .spidermanImage {
+        height: auto;
+    }
+
+    .content-overlay-heading {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .marvelImage {
+        width: 90%;
+    }
+
+    .content-overlay-para {
+        width: 90%;
+        font-size: 24px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .content-overlay {
+        padding: 0;
+    }
+
+    .content-overlay-para {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width : 352px) {
+    .content-overlay-buttons {
+        flex-direction: column;
+    }
+}
