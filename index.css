@@ -21,7 +21,7 @@
 
 @font-face {
     font-family: 'SST Medium';
-    src: url('./font/SST-Italic.woff2') format('woff2');
+    src: url('./font/SST-Medium.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -650,5 +650,141 @@
     .playstation-plus-overlay{
         flex-direction: column-reverse;
         
+    }
+}
+
+
+.media-block__img {
+    /* default image for smallest screens or non-css environments */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 70px;
+    gap: 10px;
+    background-image:url("https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-jun-homepage-background-desktop-01-en-26may23?$100px$");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
+@media screen and (min-width: 320px) {
+    .media-block__img {
+        background-image:url("https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-jun-homepage-background-mobile-01-en-26may23?$800px$");
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .media-block__img {
+        background-image:url("https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-jun-homepage-background-desktop-01-en-26may23?$1200px$");
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .media-block__img {
+        background-image:url("https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-jun-homepage-background-desktop-01-en-26may23?$1600px$");
+    }
+}
+
+@media screen and (min-width: 1367px) {
+    .media-block__img {
+        background-image:url("https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-jun-homepage-background-desktop-01-en-26may23?$2400px$");
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .media-block__img {
+        background-image:url("https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-jun-homepage-background-desktop-01-en-26may23?$3200px$");
+    }
+}
+
+@media screen and (min-width: 3000px) {
+    .media-block__img {
+        background-image:url("https://gmedia.playstation.com/is/image/SIEPDC/this-month-on-playstation-jun-homepage-background-desktop-01-en-26may23?$4000px$");
+    }
+}
+
+
+.media-block__img > p:nth-child(1){
+    font-family: "SST Light";
+    color: white;
+    font-size: 30px;
+}
+.media-block__img > p:nth-child(2){
+    font-family: "SST Medium";
+    color: white;
+    font-size: 45px;
+}
+.media-block__img > p:nth-child(3){
+    font-family: "SST Light2";
+    color: white;
+    width: 40%;
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.media-block__img > button{
+    margin-top: 18px;
+    align-self: flex-start;
+}
+
+@media screen and (max-width : 768px) {
+    .media-block__img {
+        height: 500px;
+        align-items: center;
+        background-position: top;
+        padding: 0;
+    }
+    .media-block__img > p:nth-child(1){
+        display: none;
+    }
+    .media-block__img > p:nth-child(2){
+        display: none;
+    }
+    .media-block__img > p:nth-child(3){
+        display: none;
+    }
+    .media-block__img > button{
+        position: absolute;
+        bottom: 20px;
+        left: 50px;
+    }
+}
+@media screen and (max-width : 452px) {
+    .media-block__img {
+        height: 500px;
+        background-position: top;
+        padding: 0;
+        padding-bottom: 30px;
+        justify-content: flex-end;
+    }
+    .media-block__img > p:nth-child(1){
+        display: block;
+        text-align: center;
+        font-size: 16px;
+    }
+    .media-block__img > p:nth-child(2){
+        display: block;
+        text-align: center;
+        font-size: 20px;
+    }
+    .media-block__img > p:nth-child(3){
+        display: block;
+        text-align: center;
+        font-size: 16px;
+        width: 90%;
+        margin: 0 auto;
+        
+    }
+    .media-block__img > button{
+        position: relative;
+        left: 0;
+        bottom: 0;
+        align-self: center;
     }
 }
