@@ -1337,6 +1337,14 @@
     font-family: 'SST Light2';
 }
 
+
+@media screen and (max-width : 600px) {
+    .footer-section-logo-heading {
+        font-size: 25px;
+    }
+}
+
+
 .footer-section-logo-content {
     display: flex;
     flex-direction: row;
@@ -1346,6 +1354,25 @@
     height: 100%;
     border-bottom: 1px solid #3d69b0;
     padding-bottom: 15px;
+    gap: 25px;
+}
+
+.footer-section-logo-content-left {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.footer-section-logo-content-right {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    flex-direction: row;
 }
 
 .footer-section-logo-content {
@@ -1371,6 +1398,7 @@
 .footer-section-logo-content-one {
     display: flex;
     flex-direction: column;
+    width: 200px;
     gap: 7px;
 }
 
@@ -1378,29 +1406,34 @@
     display: flex;
     flex-direction: column;
     gap: 7px;
+    width: 200px;
 }
 
 .footer-section-logo-content-three {
     display: flex;
     flex-direction: column;
+    width: 200px;
     gap: 7px;
 }
 
 .footer-section-logo-content-four {
     display: flex;
     flex-direction: column;
+    width: 200px;
     gap: 7px;
 }
 
 .footer-section-logo-content-five {
     display: flex;
     flex-direction: column;
+    width: 200px;
     gap: 7px;
 }
 
 .footer-section-logo-content-six {
     display: flex;
     flex-direction: column;
+    width: 200px;
     gap: 7px;
 }
 
@@ -1489,4 +1522,59 @@
 .footer-section-logo-content3-right div {
     font-family: "SST Light";
     font-size: 14px;
+}
+
+
+@media screen and (max-width : 1200px) {
+    .footer-section-logo-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section-logo-content3 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+}
+
+@media screen and (max-width : 800px) {
+    .footer-section {
+        padding: 10px 60px;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    .footer-section {
+        padding: 10px 40px;
+    }
+
+    .footer-section-logo-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section-logo-content-left {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section-logo-content-right {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section-logo-content3 {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-section-logo-content3-right div {
+        font-family: "SST Light";
+        font-size: 10px;
+    }
+
+    .footer-section-logo-content2 p {
+        font-size: 12px;
+    }
 }
