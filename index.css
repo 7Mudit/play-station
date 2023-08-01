@@ -894,3 +894,112 @@
     font-family: "SST Medium";
     font-size: 22px;
 }
+
+
+/* ninth section */
+.god-of-war{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.god-of-war > picture > img{
+    width: 100%;
+    height: 100%;
+}
+
+.god-of-war-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    width: 42%;
+    align-items: flex-start;
+    padding: 50px;
+    justify-content: center;
+    bottom: 0px;
+    left: 0;
+
+}
+.god-of-war-content > h1{
+    color: white;
+    font-family: "SST Light";
+    letter-spacing: 3px;
+    font-size: 32px;
+}
+.god-of-war-content > p{
+    color: white;
+    font-family: "SST";
+    font-size: 15px;
+    
+}
+
+.god-of-war-content > picture > img {
+    width: 80%;
+    height: 80%;
+}
+
+@media screen and (max-width : 1024px) {
+    .god-of-war-content{
+        width: 60%;
+    }
+    .god-of-war-content > picture > img {
+        width: 50%;
+        height: 50%;
+    }
+    .god-of-war-content > p{
+        font-size: 12px;
+        
+    }
+    .god-of-war-content > h1{
+        font-size: 20px;
+    }
+    
+    
+}
+
+@media screen and (max-width : 768px) {
+    .god-of-war-overlay{
+        position: absolute;
+        bottom: 0;
+        height: 200px;
+        width: 100%;
+        background-color: black;
+        box-shadow: 0 -10px 20px 10px rgba(0, 0, 0, 0.9);
+    }
+    .god-of-war-content{
+        align-items: center;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        width: 90%;
+        padding-bottom: 10px;
+  
+    }
+    .god-of-war-content > h1{
+        font-size: 28px;
+    }
+    .god-of-war-content > picture > img {
+        width: 70%;
+        height: 70%;
+    }
+}
+
+@media screen and (max-width : 562px) {
+    .god-of-war-content{
+        padding-bottom: 10px;
+    }
+    .god-of-war-content > h1{
+        font-size: 16px;
+    }
+    .god-of-war-content > p{
+        font-size: 8px;
+        
+    } 
+}
