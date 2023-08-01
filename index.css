@@ -1089,3 +1089,89 @@
         grid-template-columns: repeat(1 , minmax(180px , 1fr));
     }
 }
+
+
+/* explore section */
+.explore-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 50px;
+}
+
+
+
+.explore-section-cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    grid-gap: 50px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.explore-section-card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 217px;
+}
+
+.explore-section h1{
+    font-family: "SST Light2";
+    font-size: 32px;
+    height: 48px;
+}
+.explore-section  p{
+    font-family: "SST Light";
+    margin-top: 10px;
+    font-size: 16px;
+    height: 60px;
+}
+
+.explore-section-card button{
+    align-self: flex-start;
+    border-radius: 20px;
+}
+.explore-section-card img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 979px) {
+    .explore-section{
+        padding: 10px;
+        /* text-align: center;  */
+    }
+    .explore-section h1{
+        height: auto;
+    }
+    .explore-section p{
+        height: auto;
+    }
+    .explore-section-card{
+        gap: 15px;
+    }
+    .explore-section-cards{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;  
+    }
+}
+
+/* Mobile devices (portrait) */
+@media screen and (max-width: 671px) {
+    .explore-section{
+        padding: 10px;
+        text-align: center; 
+    }
+    .explore-section-cards{
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;  
+    }
+    .explore-section-card button{
+        align-self: center;
+    }
+}
