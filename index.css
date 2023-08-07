@@ -62,6 +62,10 @@
 .navbar {
     width: 100vw;
     height: 65px;
+    position: sticky;
+    top: 0px;
+    z-index: 15;
+    background-color: white;
 }
 
 .nav_section_desktop {
@@ -101,6 +105,7 @@
 
 .icon_svg {
     align-self: flex-end;
+    fill: black;
 }
 
 .btn_blue {
